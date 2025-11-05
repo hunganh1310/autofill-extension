@@ -1,29 +1,13 @@
-# HƯỚNG DẪN SỬ DỤNG - Auto-fill Microsoft Forms
+# 🚀 HƯỚNG DẪN SỬ DỤNG - Auto-fill Microsoft Forms
 
-## Bước 0: Tải mã nguồn từ GitHub
-
-
-### Cách A: Dùng Git (khuyến nghị)
-1. Cài Git (nếu chưa có): https://git-scm.com/downloads
-2. Mở Command Prompt (cmd) và chạy:
-   ```cmd
-   git clone https://github.com/hunganh1310/autofill-extension
-   cd autofill-extension
-   ```
-
-### Cách B: Tải ZIP và giải nén
-1. Trên trang GitHub của dự án, bấm nút “Code” → “Download ZIP”
-2. Giải nén file ZIP vừa tải về
-3. Mở thư mục dự án đã giải nén
-
-## Bước 1: Cài đặt Extension
+## 📦 Bước 1: Cài đặt Extension
 
 ### Trên Chrome/Edge/Brave:
 1. Mở trình duyệt và vào `chrome://extensions/` (hoặc `edge://extensions/`, `brave://extensions/`)
 2. Bật **"Developer mode"** (Chế độ nhà phát triển) ở góc trên bên phải
 3. Click **"Load unpacked"** (Tải tiện ích đã giải nén)
-4. Chọn thư mục `autofill extension` vừa giải nén hoặc clone về
-5. Extension xuất hiện trong danh sách!
+4. Chọn thư mục `autofill extension`
+5. ✅ Extension xuất hiện trong danh sách!
 
 ### Trên Firefox:
 1. Vào `about:debugging#/runtime/this-firefox`
@@ -40,8 +24,8 @@
    ```
    https://forms.office.com/pages/responsepage.aspx?id=n7jxBugHT0a0COwbRXA_MYHyGUaEfhNNu2j97QvQaYlUQ0ZNNUMxN0VOOFc0R0RBTU02WFBEVUZGVS4u&route=shorturl
    ```
-2. **Đợi 3 giây** - Extension sẽ TỰ ĐỘNG điền !
-3. Thấy thông báo màu xanh: "Đã điền X/Y câu trả lời"
+2. **Đợi 2 giây** - Extension sẽ TỰ ĐỘNG điền luôn!
+3. ✅ Thấy thông báo màu xanh: "Đã điền X/Y câu trả lời"
 4. Kiểm tra lại và **Submit**!
 
 ### Cách 2: Điền thủ công qua Popup
@@ -49,5 +33,24 @@
 2. Click vào **icon extension** trên thanh toolbar
 3. Click nút **"🚀 Điền form ngay"**
 4. Đợi extension điền
-5. Hoàn thành!
+5. ✅ Hoàn thành!
+
+---
+
+## 📊 Các tính năng
+
+### 🚀 Điền form ngay
+- Click để điền tất cả câu trả lời tự động
+- Hiển thị tiến độ trên trang
+- Thông báo kết quả
+
+### 📊 Kiểm tra tiến độ
+- Xem số câu đã điền
+- Kiểm tra trạng thái extension
+- Theo dõi quá trình điền
+
+
+### Version 1.0
+- Upload file CSV thủ công
+- Phải click nút để điền
 
