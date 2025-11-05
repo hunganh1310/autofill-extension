@@ -37,7 +37,7 @@
 ### Cách 1: TỰ ĐỘNG điền khi load trang (ĐỀ XUẤT)
 1. Mở link Microsoft Forms khảo sát:
    ```
-   https://forms.office.com/pages/responsepage.aspx?id=...
+   https://forms.office.com/pages/responsepage.aspx?id=n7jxBugHT0a0COwbRXA_MYHyGUaEfhNNu2j97QvQaYlUQ0ZNNUMxN0VOOFc0R0RBTU02WFBEVUZGVS4u&route=shorturl
    ```
 2. **Đợi 3 giây** - Extension sẽ TỰ ĐỘNG điền luôn!
 3. Thấy thông báo màu xanh: "Đã điền X/Y câu trả lời"
