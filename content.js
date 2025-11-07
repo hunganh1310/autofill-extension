@@ -1,6 +1,4 @@
-
-console.log('🚀 Microsoft Forms Auto-fill extension đã được tải!');
-
+console.log('Extension loaded, answers database:', typeof ANSWERS_DATA !== 'undefined' ? ANSWERS_DATA.length : 'NOT FOUND');
 
 let isAutoFilling = false;
 let filledCount = 0;
@@ -54,15 +52,26 @@ function autoFillForm(sendResponse) {
     questionElements.forEach((questionElement, index) => {
       try {
         const questionTextElement = questionElement.querySelector('[data-automation-id="questionTitle"]');
-        if (!questionTextElement) return;
+        if (!questionTextElement) {
+          console.warn(`Question ${index + 1}: No title element found`);
+          return;
+        }
         
         const questionText = cleanText(questionTextElement.textContent);
+        console.log(`Q${index + 1}: "${questionText.substring(0, 60)}..."`);
+        
         const matchedData = findBestMatch(questionText, ANSWERS_DATA, questionElement);
         
         if (matchedData) {
+          console.log(`  -> Found match: "${matchedData.answer.substring(0, 40)}"`);
           if (fillAnswer(questionElement, matchedData.answer)) {
             filledCount++;
+            console.log(`  -> ✓ Filled successfully`);
+          } else {
+            console.warn(`  -> ✗ Failed to fill`);
           }
+        } else {
+          console.warn(`  -> ✗ No match found`);
         }
       } catch (err) {
         console.error(`Error processing question ${index + 1}:`, err);

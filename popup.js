@@ -29,9 +29,13 @@ document.getElementById('fillForm').addEventListener('click', function() {
     
     chrome.tabs.sendMessage(currentTab.id, { action: 'fillForm' }, function(response) {
       if (chrome.runtime.lastError) {
-        showStatus('❌ Error: ' + chrome.runtime.lastError.message, 'error');
+        console.error('Message error:', chrome.runtime.lastError);
+        showStatus('❌ Please reload the page first!', 'error');
         updateExtensionStatus('Error', '#dc3545');
-      } else if (response && response.success) {
+        return;
+      }
+      
+      if (response && response.success) {
         showStatus('✅ ' + response.message, 'success');
         updateExtensionStatus('Completed!', '#28a745');
       } else {
@@ -53,8 +57,12 @@ document.getElementById('checkStatus').addEventListener('click', function() {
     
     chrome.tabs.sendMessage(currentTab.id, { action: 'getStatus' }, function(response) {
       if (chrome.runtime.lastError) {
-        showStatus('❌ Cannot check. Please reload the page!', 'error');
-      } else if (response) {
+        console.error('Message error:', chrome.runtime.lastError);
+        showStatus('❌ Please reload the page!', 'error');
+        return;
+      }
+      
+      if (response) {
         if (response.total === 0) {
           showStatus('ℹ️ No data yet', 'info');
         } else {

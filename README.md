@@ -50,3 +50,15 @@
 4. Đợi extension điền
 5. Hoàn thành!
 
+---
+
+## ⚠️ Xử lý lỗi thường gặp
+
+### Lỗi: "Could not establish connection. Receiving end does not exist."
+
+**Nguyên nhân:** Content script chưa được load khi bạn click vào popup.
+
+**Giải pháp:**
+1. **Reload lại trang form** (nhấn F5 hoặc Ctrl+R)
+2. Đợi trang load hoàn toàn (3 giây)
+3. Thử click vào extension popup lại
